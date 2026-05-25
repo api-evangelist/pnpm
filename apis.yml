@@ -1,0 +1,394 @@
+aid: pnpm
+url: https://raw.githubusercontent.com/api-evangelist/pnpm/refs/heads/main/apis.yml
+apis:
+- aid: pnpm:pnpm-cli
+  name: pnpm CLI
+  tags:
+  - CLI
+  - Node.js
+  - Package Manager
+  - Dependency Management
+  humanURL: https://pnpm.io/pnpm-cli
+  properties:
+  - url: https://pnpm.io/pnpm-cli
+    type: Documentation
+  - url: https://pnpm.io/cli/install
+    name: pnpm install
+    type: Documentation
+  - url: https://pnpm.io/cli/add
+    name: pnpm add
+    type: Documentation
+  - url: https://pnpm.io/cli/update
+    name: pnpm update
+    type: Documentation
+  - url: https://pnpm.io/cli/remove
+    name: pnpm remove
+    type: Documentation
+  - url: https://pnpm.io/cli/run
+    name: pnpm run
+    type: Documentation
+  - url: https://pnpm.io/cli/exec
+    name: pnpm exec
+    type: Documentation
+  - url: https://pnpm.io/cli/dlx
+    name: pnpm dlx (pnx)
+    type: Documentation
+  - url: https://pnpm.io/cli/publish
+    name: pnpm publish
+    type: Documentation
+  - url: https://pnpm.io/cli/audit
+    name: pnpm audit
+    type: Documentation
+  - url: https://pnpm.io/cli/store
+    name: pnpm store
+    type: Documentation
+  - url: https://pnpm.io/cli/list
+    name: pnpm list
+    type: Documentation
+  - url: https://pnpm.io/cli/why
+    name: pnpm why
+    type: Documentation
+  - url: https://pnpm.io/cli/outdated
+    name: pnpm outdated
+    type: Documentation
+  - url: https://pnpm.io/cli/patch
+    name: pnpm patch
+    type: Documentation
+  description: The pnpm command-line interface for managing JavaScript/Node.js packages. Provides commands for
+    installing, updating, and removing dependencies; running package scripts; executing one-off packages via
+    pnx (formerly dlx); publishing to registries; auditing for vulnerabilities; managing the content-addressable
+    store; inspecting the dependency graph; and patching installed packages. As of pnpm 11, `pn` is a shorthand
+    for `pnpm` and `pnx` replaces `pnpm dlx`.
+- aid: pnpm:pnpm-workspaces
+  name: pnpm Workspaces
+  tags:
+  - Monorepo
+  - Node.js
+  - Package Manager
+  - Workspaces
+  humanURL: https://pnpm.io/workspaces
+  properties:
+  - url: https://pnpm.io/workspaces
+    type: Documentation
+  - url: https://pnpm.io/pnpm-workspace_yaml
+    name: pnpm-workspace.yaml reference
+    type: Documentation
+  - url: https://pnpm.io/catalogs
+    name: Catalogs
+    type: Documentation
+  - url: https://pnpm.io/filtering
+    name: Filtering
+    type: Documentation
+  - url: https://pnpm.io/cli/recursive
+    name: pnpm recursive (-r)
+    type: Documentation
+  description: Native monorepo support driven by a `pnpm-workspace.yaml` file at the repository root. Supports
+    the `workspace:` protocol for explicit local package references, a shared workspace lockfile, package
+    filtering via `--filter`, recursive commands across all workspace packages, and Catalogs for centralized
+    dependency version management across a monorepo. Integrates with Changesets and Rush for multi-package
+    releases.
+- aid: pnpm:pnpm-store
+  name: pnpm Content-Addressable Store
+  tags:
+  - Storage
+  - Node.js
+  - Package Manager
+  - Cache
+  humanURL: https://pnpm.io/symlinked-node-modules-structure
+  properties:
+  - url: https://pnpm.io/symlinked-node-modules-structure
+    name: Symlinked node_modules structure
+    type: Documentation
+  - url: https://pnpm.io/motivation
+    name: Motivation
+    type: Documentation
+  - url: https://pnpm.io/cli/store
+    name: pnpm store CLI
+    type: Documentation
+  - url: https://pnpm.io/npmrc#store-dir
+    name: store-dir config
+    type: Documentation
+  description: A content-addressable store that holds every version of every package exactly once on disk and
+    hard-links (or reflinks) files into project `node_modules`. This produces a strict, non-flat dependency
+    layout where packages can only access their declared dependencies, and saves significant disk space across
+    projects on the same machine. Includes commands to inspect, prune, verify, and configure the store.
+- aid: pnpm:pnpm-hooks
+  name: pnpm Hooks
+  tags:
+  - Hooks
+  - Extension
+  - Node.js
+  - Package Manager
+  humanURL: https://pnpm.io/pnpmfile
+  properties:
+  - url: https://pnpm.io/pnpmfile
+    name: .pnpmfile.cjs
+    type: Documentation
+  - url: https://pnpm.io/package_json#pnpmoverrides
+    name: pnpm.overrides
+    type: Documentation
+  - url: https://pnpm.io/package_json#pnpmpackageextensions
+    name: pnpm.packageExtensions
+    type: Documentation
+  - url: https://pnpm.io/package_json#pnpmpatcheddependencies
+    name: pnpm.patchedDependencies
+    type: Documentation
+  description: Programmatic extension points for customizing dependency resolution and installation behavior.
+    `.pnpmfile.cjs` exposes lifecycle hooks (`readPackage`, `afterAllResolved`) that let projects rewrite
+    package manifests before installation. The `pnpm` block in `package.json` adds `overrides`,
+    `packageExtensions`, `patchedDependencies`, `peerDependencyRules`, and `neverBuiltDependencies` for
+    fine-grained dependency control without forking packages.
+- aid: pnpm:pnpm-config
+  name: pnpm Configuration
+  tags:
+  - Configuration
+  - Node.js
+  - Package Manager
+  humanURL: https://pnpm.io/npmrc
+  properties:
+  - url: https://pnpm.io/npmrc
+    name: .npmrc
+    type: Documentation
+  - url: https://pnpm.io/package_json
+    name: package.json pnpm fields
+    type: Documentation
+  - url: https://pnpm.io/cli/config
+    name: pnpm config CLI
+    type: Documentation
+  - url: https://pnpm.io/settings
+    name: Settings
+    type: Documentation
+  description: Configuration surface for pnpm spanning `.npmrc`, environment variables, and `pnpm`-prefixed
+    fields in `package.json`. Controls registry selection, authentication tokens, store location, hoisting
+    behavior, lockfile settings, lifecycle script policy (including the supply-chain safety settings such as
+    `minimumReleaseAge` and `ignoredBuiltDependencies`), peer dependency rules, and workspace behavior.
+name: pnpm
+tags:
+- Node.js
+- Package Manager
+- Monorepo
+- JavaScript
+- Open Source
+- Developer Tools
+- Dependency Management
+- CLI
+kind: contract
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+common:
+- url: https://pnpm.io
+  name: pnpm Website
+  type: Portal
+- url: https://pnpm.io/installation
+  name: Installation
+  type: GettingStarted
+- url: https://pnpm.io/motivation
+  name: Motivation
+  type: Documentation
+- url: https://pnpm.io/pnpm-cli
+  name: pnpm CLI Reference
+  type: Documentation
+- url: https://github.com/pnpm/pnpm
+  name: pnpm on GitHub
+  type: GitHubRepository
+- url: https://github.com/pnpm
+  name: pnpm GitHub Organization
+  type: GitHubOrganization
+- url: https://github.com/pnpm/pnpm/releases
+  name: pnpm Releases
+  type: ReleaseNotes
+- url: https://github.com/pnpm/pnpm/blob/main/LICENSE
+  name: MIT License
+  type: Legal
+- url: https://github.com/pnpm/pnpm/blob/main/CHANGELOG.md
+  name: Changelog
+  type: ChangeLog
+- url: https://github.com/pnpm/pnpm/issues
+  name: Issues
+  type: Support
+- url: https://github.com/pnpm/pnpm/discussions
+  name: GitHub Discussions
+  type: Support
+- url: https://chat.pnpm.io/
+  name: pnpm Discord
+  type: Contact
+- url: https://x.com/pnpmjs
+  name: pnpm on X
+  type: X
+- url: https://bsky.app/profile/pnpm.io
+  name: pnpm on Bluesky
+  type: Contact
+- url: https://www.youtube.com/@pnpmjs
+  name: pnpm on YouTube
+  type: YouTube
+- url: https://stackoverflow.com/questions/tagged/pnpm
+  name: pnpm on Stack Overflow
+  type: StackOverflow
+- url: https://www.npmjs.com/package/pnpm
+  name: pnpm on npm
+  type: SDK
+- url: https://www.npmjs.com/package/@pnpm/exe
+  name: '@pnpm/exe (bundled executable)'
+  type: SDK
+- url: https://github.com/pnpm/action-setup
+  name: pnpm/action-setup (GitHub Action)
+  type: Integrations
+- url: https://github.com/pnpm/setup
+  name: pnpm/setup (multi-runtime GitHub Action)
+  type: Integrations
+- url: https://github.com/pnpm/exec
+  name: pnpm/exec
+  type: Integrations
+- url: https://opencollective.com/pnpm
+  name: pnpm on Open Collective
+  type: Pricing
+- url: https://github.com/sponsors/pnpm
+  name: GitHub Sponsors
+  type: Pricing
+- url: https://pnpm.io/blog
+  name: pnpm Blog
+  type: Blog
+- url: https://pnpm.io/feature-comparison
+  name: Feature comparison vs npm/Yarn
+  type: Documentation
+- url: https://pnpm.io/benchmarks
+  name: Benchmarks
+  type: Documentation
+- url: https://pnpm.io/faq
+  name: FAQ
+  type: FAQ
+- url: https://pnpm.io/uses
+  name: Who uses pnpm
+  type: Showcase
+- url: https://github.com/pnpm/rfcs
+  name: pnpm RFCs
+  type: Documentation
+- type: Features
+  data:
+  - name: Content-addressable store
+    description: Each package version is stored once on disk and hard-linked into projects, saving substantial
+      disk space across all projects on the machine.
+  - name: Strict, non-flat node_modules
+    description: A symlinked node_modules layout means packages can only access dependencies they explicitly
+      declare, catching phantom-dependency bugs at install time.
+  - name: Up to 2x faster installs
+    description: Optimized installation pipeline that is consistently faster than npm and Yarn on cold and
+      warm installs, especially for large monorepos.
+  - name: Native workspace and monorepo support
+    description: First-class workspaces driven by pnpm-workspace.yaml with the workspace protocol, recursive
+      commands, package filtering, and Catalogs for shared version pinning.
+  - name: Catalogs
+    description: Centralized dependency-version management across a monorepo so every package shares a single
+      pinned version of common dependencies.
+  - name: Deterministic lockfile
+    description: pnpm-lock.yaml captures the exact resolved dependency graph, peer relationships, and patches
+      for reproducible installs.
+  - name: Supply-chain safety controls
+    description: minimumReleaseAge to delay adoption of brand-new package versions, ignoredBuiltDependencies
+      and onlyBuiltDependencies to opt into lifecycle scripts, and removal of postinstall scripts by default.
+  - name: pnpm patch
+    description: Built-in workflow to patch installed dependencies and persist the patch in
+      pnpm.patchedDependencies without forking the package.
+  - name: pnpm overrides and packageExtensions
+    description: Repository-level dependency rewriting and peer-dependency repair without forking upstream
+      packages.
+  - name: .pnpmfile.cjs hooks
+    description: readPackage and afterAllResolved hooks let you programmatically rewrite manifests during
+      resolution and installation.
+  - name: pnx (dlx) and pnpm exec
+    description: Run packages without installing them globally, with caching in the store.
+  - name: Built-in runtime management
+    description: pnpm env install lets you manage Node.js (and other JavaScript runtime) versions directly
+      through pnpm.
+  - name: Cross-platform standalone binary
+    description: Distributed as @pnpm/exe, a single self-contained executable that does not require an
+      existing Node.js installation.
+  - name: Corepack-compatible
+    description: First-class support for Node.js Corepack so projects can pin a specific pnpm version via
+      packageManager in package.json.
+  - name: MIT-licensed open source
+    description: Permissively licensed and developed in the open on GitHub with an Open Collective sponsorship
+      model.
+  sources:
+  - https://pnpm.io
+  - https://pnpm.io/motivation
+  - https://pnpm.io/feature-comparison
+  - https://github.com/pnpm/pnpm
+  updated: '2026-05-25'
+- type: UseCases
+  data:
+  - name: Large JavaScript monorepos
+    description: Manage hundreds of interdependent packages with a single shared lockfile, the workspace
+      protocol, Catalogs, and recursive commands.
+  - name: CI/CD pipeline acceleration
+    description: Cut install time substantially in CI by leveraging the content-addressable store and the
+      official pnpm/action-setup GitHub Action.
+  - name: Disk-constrained developer machines
+    description: Share a single copy of each package version across every project on a machine, dramatically
+      reducing disk usage compared to npm or Yarn.
+  - name: Supply-chain hardening
+    description: Use minimumReleaseAge, ignoredBuiltDependencies, and strict lifecycle script policy to
+      reduce exposure to malicious or compromised npm packages.
+  - name: Phantom dependency detection
+    description: The strict non-flat node_modules layout surfaces undeclared dependencies during local
+      development rather than in production.
+  - name: Reproducible builds
+    description: pnpm-lock.yaml plus pnpm.overrides and pnpm.patchedDependencies make installations
+      byte-reproducible across machines.
+  - name: Multi-runtime JavaScript projects
+    description: Use the pnpm/setup action and pnpm env to standardize Node.js, Bun, or Deno versions across
+      teams.
+  sources:
+  - https://pnpm.io/motivation
+  - https://pnpm.io/workspaces
+  - https://pnpm.io/feature-comparison
+  updated: '2026-05-25'
+- type: Integrations
+  data:
+  - name: Node.js Corepack
+    description: pnpm is one of the package managers managed by Corepack, enabling version pinning via
+      packageManager in package.json.
+  - name: GitHub Actions
+    description: Official pnpm/action-setup and pnpm/setup actions for installing pnpm and a JavaScript
+      runtime in a single step.
+  - name: Changesets
+    description: Recommended workflow tool for versioning and publishing packages in pnpm monorepos.
+  - name: Microsoft Rush
+    description: Rush uses pnpm under the hood for large monorepos at Microsoft and elsewhere.
+  - name: Nx
+    description: Nx integrates with pnpm workspaces for monorepo task orchestration and caching.
+  - name: Turbo (Turborepo)
+    description: First-class pnpm workspace support for incremental builds and remote caching.
+  - name: Docker
+    description: Official guidance for using pnpm in Docker images, including the standalone binary and
+      lockfile-aware multi-stage builds.
+  - name: Verdaccio and private registries
+    description: Works with any npm-compatible registry including Verdaccio, JFrog Artifactory, GitHub
+      Packages, and AWS CodeArtifact.
+  - name: Bit
+    description: Bit Cloud (a Platinum sponsor) uses pnpm as a foundation for component-based development.
+  - name: Vercel, Netlify, Cloudflare Pages
+    description: First-class support for pnpm in major JavaScript deployment platforms with workspace-aware
+      installs.
+  sources:
+  - https://pnpm.io
+  - https://pnpm.io/continuous-integration
+  - https://github.com/pnpm
+  updated: '2026-05-25'
+created: '2026-05-25'
+modified: '2026-05-25'
+position: Consuming
+description: pnpm is a fast, disk space efficient package manager for JavaScript and Node.js projects. It uses
+  a content-addressable store and a strict, symlinked node_modules layout so every version of every package
+  is stored exactly once on disk and projects can only access dependencies they explicitly declare. pnpm
+  provides first-class monorepo support via pnpm-workspace.yaml, the workspace protocol, Catalogs, package
+  filtering, and a shared lockfile, and ships supply-chain safety features such as minimumReleaseAge, opt-in
+  lifecycle scripts, dependency overrides, and a built-in patch workflow. Developed in the open under the MIT
+  license on GitHub with an Open Collective sponsorship model, pnpm is used by major JavaScript projects
+  including Next.js, Vue, Vite, Nuxt, Material UI, Prisma, Astro, and SvelteKit.
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  X: apievangelist
+  url: https://apievangelist.com
+specificationVersion: '0.16'
