@@ -2,13 +2,20 @@
   "repo": "pnpm",
   "feeds": [
     {
-      "source": "https://pnpm.io/blog",
+      "source": "https://pnpm.io/blog/atom.xml",
       "feed_url": "https://pnpm.io/blog/atom.xml",
       "title": "",
       "saved": 1,
+      "method": "feed"
+    },
+    {
+      "source": "https://pnpm.io/blog",
+      "feed_url": "https://pnpm.io/blog/atom.xml",
+      "title": "",
+      "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-06-01T23:35:02Z"
+  "post_count": 2,
+  "fetched": "2026-06-14T20:42:17Z"
 }
