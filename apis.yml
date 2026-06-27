@@ -226,10 +226,10 @@ common:
   type: StackOverflow
 - url: https://www.npmjs.com/package/pnpm
   name: pnpm on npm
-  type: SDK
+  type: SDKs
 - url: https://www.npmjs.com/package/@pnpm/exe
   name: '@pnpm/exe (bundled executable)'
-  type: SDK
+  type: SDKs
 - url: https://github.com/pnpm/action-setup
   name: pnpm/action-setup (GitHub Action)
   type: Integrations
