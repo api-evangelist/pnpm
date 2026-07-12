@@ -176,6 +176,8 @@ kind: contract
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+- type: DomainSecurity
+  url: security/pnpm-domain-security.yml
 - url: https://pnpm.io
   name: pnpm Website
   type: Portal
