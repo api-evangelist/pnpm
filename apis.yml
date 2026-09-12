@@ -208,6 +208,8 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pnpm.png
 access: 3rd-Party
 common:
+- type: Website
+  url: https://www.pnpm.io/
 - type: DomainSecurity
   url: security/pnpm-domain-security.yml
 - url: https://pnpm.io
