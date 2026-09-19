@@ -65,6 +65,11 @@ apis:
   - Monorepo
   - Node.js
   - Package Manager
+  - Workspace
+  tags_raw:
+  - Monorepo
+  - Node.js
+  - Package Manager
   - Workspaces
   humanURL: https://pnpm.io/workspaces
   properties:
