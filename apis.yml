@@ -173,7 +173,7 @@ tags:
 - Package Manager
 - Monorepo
 - JavaScript
-- Open-Source
+- Open Source
 - Developer Tools
 - Dependency Management
 - CLI
@@ -186,18 +186,24 @@ tags_raw:
 - Developer Tools
 - Dependency Management
 - CLI
+- Open-Source
 kind: contract
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: open-core
+  license: MIT
+  license_evidence:
+    repo: pnpm/pnpm
+    spdx: MIT
+    stars: 36634
+  open_source: true
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: medium
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
